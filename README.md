@@ -111,6 +111,32 @@ every push to master also builds a debug apk (actions → build → artifacts).
 2. the first time, android asks to allow audio capture (skipped entirely with shizuku).
 3. from then on you can also use the media controls' output picker, the quick settings tile, the widget or the volume buttons.
 
+### skip the screen-capture permission prompt without shizuku (adb)
+
+you can try pre-authorizing centuryplay's android mediaprojection permission using **adb**, without root or shizuku. this is only for the ordinary screen/audio capture permission prompt; it is **not** shizuku's privileged audio rerouting mode.
+
+1. install adb (android platform-tools), enable usb or wireless debugging on your android device, and connect it to your computer.
+2. check the connection and allow the debugging authorization on the phone if prompted:
+   ```bash
+   adb devices
+   ```
+3. allow centuryplay's mediaprojection app-op:
+   ```bash
+   adb shell appops set com.airplay.streamer PROJECT_MEDIA allow
+   ```
+4. verify the setting:
+   ```bash
+   adb shell appops get com.airplay.streamer PROJECT_MEDIA
+   ```
+
+to **restore the default android permission behavior**, run:
+
+```bash
+adb shell appops set com.airplay.streamer PROJECT_MEDIA default
+```
+
+**limitations:** android version and manufacturer restrictions may still require a capture prompt or reset this setting. this app-op does not bypass other apps' audio-capture restrictions, provide silent-phone audio rerouting, or grant shizuku-specific functionality. if the prompt still appears, use android's normal consent dialog.
+
 ### shizuku (recommended)
 
 install and start [shizuku](https://shizuku.rikka.app/), then tap "set up" on the card in centuryplay. it grants, once:
