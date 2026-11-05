@@ -3,6 +3,7 @@
 > [!WARNING]
 > **Work in progress — SYMFONISK/PTP fix not published yet.**
 > This fork currently does **not** contain the local SYMFONISK/PTP compatibility changes being developed. They have **not been committed or pushed** to GitHub, and no fixed APK has been published or verified. **Do not treat this repository or its builds as a working SYMFONISK fix yet.** This notice will be updated once the changes have been pushed and tested.
+> **Expected completion: November 7, 2026 (within two days).** This is a target date, not a guarantee; the release depends on finishing and testing the fix.
 
 
 stream audio from your android device to airplay speakers.
