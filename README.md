@@ -1,5 +1,10 @@
 # centuryplay
 
+> [!WARNING]
+> **Work in progress — SYMFONISK/PTP fix not published yet.**
+> This fork currently does **not** contain the local SYMFONISK/PTP compatibility changes being developed. They have **not been committed or pushed** to GitHub, and no fixed APK has been published or verified. **Do not treat this repository or its builds as a working SYMFONISK fix yet.** This notice will be updated once the changes have been pushed and tested.
+
+
 stream audio from your android device to airplay speakers.
 
 ![android](https://img.shields.io/badge/android-11%2B-green)
