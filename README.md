@@ -1,11 +1,5 @@
 # centuryplay
 
-> [!WARNING]
-> **Work in progress — SYMFONISK/PTP fix not published yet.**
-> **A beta build is already running locally**, including work on the SYMFONISK/PTP compatibility fix, but those changes have **not yet been committed or pushed** to this GitHub fork. No fixed APK has been publicly published or independently verified yet. **Do not treat the current repository builds as the fixed SYMFONISK version.** This notice will be updated after the changes have been pushed and tested.
-> **Expected completion: November 7, 2026 (within two days).** This is a target date, not a guarantee; the release depends on finishing and testing the fix.
-
-
 stream audio from your android device to airplay speakers.
 
 ![android](https://img.shields.io/badge/android-11%2B-green)
