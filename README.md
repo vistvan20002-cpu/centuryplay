@@ -149,6 +149,18 @@ install and start [shizuku](https://shizuku.rikka.app/), then tap "set up" on th
 the screen-capture approval (no more prompt), notification access (track info), battery exemption, and lets centuryplay
 *reroute* media audio instead of copying it — the phone speaker is bypassed and nothing shows the "casting" indicator.
 
+### MediaProjection without Shizuku capture
+
+If you prefer MediaProjection capture but do not want Android to show its screen-capture prompt, connect the phone once
+with USB debugging enabled and run:
+
+```bash
+adb shell appops set com.airplay.streamer PROJECT_MEDIA allow
+```
+
+Then turn off **capture through shizuku** in CenturyPlay settings. MediaProjection remains the capture source, and Android
+keeps this approval until CenturyPlay is uninstalled.
+
 ## how it works
 
 uses android's `audioplaybackcapture` api to capture system audio, then streams it to airplay receivers using raop (remote audio output protocol).

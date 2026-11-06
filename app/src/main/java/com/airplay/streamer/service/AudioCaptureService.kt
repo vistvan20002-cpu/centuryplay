@@ -305,6 +305,8 @@ class AudioCaptureService : Service() {
             preferPcm = prefs.preferPcm,
             preferAirPlay2 = prefs.preferAirPlay2,
             senderName = prefs.senderName,
+            nativeLibraryDir = applicationInfo.nativeLibraryDir,
+            runtimeDir = filesDir,
         )
         val s = StreamSession(
             scope, settings,

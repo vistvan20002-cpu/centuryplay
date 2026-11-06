@@ -40,6 +40,8 @@ data class SessionSettings(
     val preferPcm: Boolean = false,
     val preferAirPlay2: Boolean = false,
     val senderName: String = "centuryplay",
+    val nativeLibraryDir: String,
+    val runtimeDir: java.io.File,
 )
 
 /**
@@ -174,6 +176,8 @@ class StreamSession(
             val sink = try {
                 SinkFactory.create(
                     device, transport, settings.senderName, settings.preferPcm, passwordFor(device.identity),
+                    settings.nativeLibraryDir,
+                    settings.runtimeDir,
                     hapStore = hapStore,
                     pinProvider = { requestPin(device, entry.volume) },
                     forcePin = usePin,
